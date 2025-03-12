@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <header class="h-screen w-screen bg-green-500 flex flex-col gap-4 justify-center items-center">
+
+        <div class="clickbtn relative bg-black text-white text-3xl tracking-widest p-4 rounded-lg overflow-hidden cursor-pointer">Anasayfa
+        <div class="slider absolute top-0 h-full p-4 -left-0 w-full z-10 bg-green-300/40 transition-all duration-600"></div>
+        </div>
+
+        <div class="clickbtn relative bg-black text-white text-3xl tracking-widest p-4 rounded-lg overflow-hidden cursor-pointer">Hakkımızda
+            <div class="slider absolute top-0 h-full p-4 -left-0 w-full z-10 bg-green-300/40 transition-all duration-600"></div>
+        </div>
+
+        <div class="clickbtn relative bg-black text-white text-3xl tracking-widest p-4 rounded-lg overflow-hidden cursor-pointer">İletişim
+                <div class="slider absolute top-0 h-full p-4 -left-0 w-full z-10 bg-green-300/40 transition-all duration-600"></div>
+        </div>
+
+        <script>
+            $(document).ready(function() {
+                $(".clickbtn").mouseover(function() {
+                    $(this).children(".slider").addClass("-left-full");
+                    $(this).children(".slider").removeClass("-left-0");
+                });
+
+                $(".clickbtn").mouseleave(function() {
+                    $(this).children(".slider").addClass("-left-0");
+                    $(this).children(".slider").removeClass("-left-full");
+                });
+            });
+        </script>
+    </header>
+</body>
+</html>
